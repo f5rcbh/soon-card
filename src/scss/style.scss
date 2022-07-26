@@ -1,3 +1,32 @@
 @forward 'global';
 @forward 'fonts';
 @forward 'breakpoint';
+@use 'func' as func;
+
+body{
+    background: url(../images/bg-pattern-desktop.svg) left  ,url(../images/bg-pattern-desktop.svg) right ;
+    background-size: cover;
+
+}
+
+.App{
+    @include func.flexCenter();
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    img{
+        float: left;
+        width: 505px;
+    }
+    .soon-card{
+        margin: auto;
+        border: solid;
+        background: url(../images/logo.svg) no-repeat ;
+        background-position: 10rem 3rem;
+        height: 100%;
+        width: 100%;
+        
+        
+    }
+
+    
+}

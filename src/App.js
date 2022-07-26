@@ -1,9 +1,11 @@
 import './scss/style.css'
-
+import Profile from './images/hero-desktop.jpg'
+import Soon from './components/soon';
 function App() {
   return (
     <div className="App">
-      <h1>hey there</h1>
+      <Soon/>
+      <img src={Profile} alt="" />
     </div>
   );
 }

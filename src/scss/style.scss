@@ -1,8 +1,10 @@
 @forward 'global';
 @use 'fonts/color' as color;
 @use 'fonts/text' as text;
-@forward 'breakpoint';
+@use 'breakpoint' as break ;
 @use 'func' as func;
+
+// Desktop Version
 
 body{
     background: url(../images/bg-pattern-desktop.svg) no-repeat left, linear-gradient(135deg, hsl(0, 0%, 100%),  hsl(0, 100%, 98%)),
@@ -13,47 +15,100 @@ body{
 
 .App{
     display: flex;
-
-    img{
-        // float: left;
-        max-width: 31.6rem;
-        
     
+    img{
+        margin: 0 0 0 0;
+        width: 31.6rem;
         
+        @include break.breakpoint(medium){
+            width: 25rem;
+        }
+       
         
+        @include break.breakpoint(small){
+            
+            width: auto;
+            clip-path: polygon(0 5%, 100% 5%, 100% 55%, 0 55%);
+            
+            
+            transform: translateY(50px);
+        
+        }
+    }
+    @include break.breakpoint(small){
+        flex-direction: column-reverse;
+        background: url(../images/logo.svg) no-repeat;
+        background-position: 2rem 2rem;
+        background-size: 7rem;
     }
     .soon-card{
+        margin: auto;
         height: 100vh;
         background: url(../images/logo.svg) no-repeat ;
         background-position: 8rem 3rem;
         width: 100%;
         @include func.gridCenter();
+        @include break.breakpoint(small){
+            background: none; 
+            margin: auto;
+            height:0vh;
+        }
+
         .wrapper{
             // border: solid;
             @include func.flexCenter();
             align-items: flex-start;
             flex-direction: column;
-            max-width: 30rem;
+            flex-wrap: wrap;
+            width: 30rem;
             word-wrap: break-word;
-            word-break: keep-all;
             font-family: text.$family;
+            @include break.breakpoint(medium){
+                
+                width: 25rem;
+            }
+            @include break.breakpoint(small){
+            
+                width: 18rem;
+                transform: translateY(-100px);
+                text-align: center;
+                .massage{
+                    padding-top: 10px;
+                    margin: auto;
+                }
+               
+            }
             h1{
+                @include break.breakpoint(medium){
+                        font-size: 50px;
+                    
+                }
+                @include break.breakpoint(small){
+                    margin: 5px 0;
+                    font-size: 30px;
+                }
                 span{
                     color: color.$destRed;
                     font-weight: 300;
-
                 }
+                letter-spacing: 10px;
                 margin: 10px 0;
-                font-weight: 400;
+                font-weight: 600;
                 font-size: 80px;
                 line-height: 1;
                 text-transform: uppercase;
             }
             p{
+                word-wrap: break-word;
                 margin: 10px 5px;
-                width: 28rem;
+                width: 28rem auto;
                 color:color.$destRed;
                 line-height:1.5;
+                @include break.breakpoint(small){
+                    font-size: 14px;
+                    margin: 5px 5px;
+                }
+                
             }
             form{
                 position: relative;
@@ -78,9 +133,19 @@ body{
                     box-shadow: 5px 10px 20px -15px #000;
                     cursor: pointer;
                     transition: all .2s linear;
+                    @include break.breakpoint(medium){
+                        left: 15rem;
+                    }
+                    @include break.breakpoint(small){
+                        left: 12rem;
+                    }
                     &:hover{
                         transform: scale(1.2);
                         box-shadow: 5px 10px 30px -10px #000;
+                        @include break.breakpoint(small){
+                         transform: scale(1);
+                         box-shadow: none;   
+                        }
                         
                     }
                 }
@@ -91,3 +156,6 @@ body{
 
     
 }
+
+
+// Tablet Version

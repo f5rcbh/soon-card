@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/soon-card/static/css/main.1a13d18f.css",
+    "main.css": "/soon-card/static/css/main.898b3f7c.css",
     "main.js": "/soon-card/static/js/main.e3b6fe37.js",
     "static/js/787.db33642e.chunk.js": "/soon-card/static/js/787.db33642e.chunk.js",
     "static/media/hero-desktop.jpg": "/soon-card/static/media/hero-desktop.659bc9a7221d265fe28f.jpg",
     "static/media/logo.svg": "/soon-card/static/media/logo.bfe35add16fb8c010b02.svg",
     "static/media/bg-pattern-desktop.svg": "/soon-card/static/media/bg-pattern-desktop.964ebd4dd8014fd040d7.svg",
     "index.html": "/soon-card/index.html",
-    "main.1a13d18f.css.map": "/soon-card/static/css/main.1a13d18f.css.map",
+    "main.898b3f7c.css.map": "/soon-card/static/css/main.898b3f7c.css.map",
     "main.e3b6fe37.js.map": "/soon-card/static/js/main.e3b6fe37.js.map",
     "787.db33642e.chunk.js.map": "/soon-card/static/js/787.db33642e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a13d18f.css",
+    "static/css/main.898b3f7c.css",
     "static/js/main.e3b6fe37.js"
   ]
 }
